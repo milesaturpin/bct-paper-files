@@ -21,7 +21,7 @@ BCT virtually eliminates biased reasoning on held-out tasks for the bias we trai
 To address the concern that BCT with other biases may not exhibit the same generalization behavior, we evaluate the aforementioned models trained using BCT with individual biases.
 
 Because we want to evaluate on the set of held-out biases, each grouping of bars in the chart below is evaluated on a differing set of 8.  Because of this, we report numbers for GPT-3.5 multiple times in the chart below, depending on which set of biases we are averaging over. 
-![Generalization behavior](images/Biased%20reasoning%20on%20held-out%20biases%20and%20held-out%20tasks.pdf)
+![Generalization behavior](images/Biased%20reasoning%20on%20held-out%20biases%20and%20held-out%20tasks.png)
 
 We see that BCT with other biases also exhibits generalization to held-out biases. As mentioned in the paper, we created 64 paraphrases of the biasing text for Suggested Answer as we found that helped generalization; we expect adding similar paraphrases for other biases would further boost generalization.
 
