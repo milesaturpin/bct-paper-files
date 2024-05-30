@@ -1,3 +1,5 @@
+# BCT works well when training with other biases
+
 To address the concern that BCT may not be effective on other biases, we run BCT with 5 other biases other than Suggested Answer (the remaining 3 were tricky to convert for training on short notice). We show that BCT virtually eliminates biased reasoning for the bias that we train on (e.g. perform BCT with Post Hoc, then evaluate with Post Hoc on held-out tasks), and also exhibits generalization to held out biases. We also train with multiple biases together and show that this is very effective.
 
 We test the following models:
