@@ -1,3 +1,0 @@
-# bct-paper-files
-
-test
