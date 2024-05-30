@@ -27,6 +27,8 @@ While we think understanding which biases lead to better generalization is an in
 
 ### Performance evals
 
+We ran some of our performance evaluations on these new models and find the same trends as the results on BCT Suggested Answer in the paper.
+
 Zero-shot CoT accuracy remains virtually unchanged. We evaluate on held-out tasks given unbiased context:
 
 |                            | Accuracy |
@@ -40,6 +42,9 @@ Zero-shot CoT accuracy remains virtually unchanged. We evaluate on held-out task
 | BCT (Distractor: Fact)     |     60.3 |
 | BCT (Distractor: Argument) |    60.55 |
 | BCT (All 6)                |    60.05 |
+
+Few-shot shot performance on TruthfulQA remains close to GPT-3.5T, within ~1%, performing the same as the self-training baseline. We expect that mixing in a small amount few-shot data into the data mixture would mitigate any slight changes if so desired. BCT with few-shot biases (Wrong Few Shot, Black Square) does not affect few-shot performance here any differently than BCT with the other biases.
+
 
 
 MT-Bench scores remain unchanged:
