@@ -25,3 +25,28 @@ We see that BCT with other biases also exhibits generalization to held-out biase
 
 While we think understanding which biases lead to better generalization is an interesting research question, we do not think our sample size of biases is large enough to draw good conclusions here.
 
+### Performance evals
+
+Zero-shot CoT accuracy remains virtually unchanged. We evaluate on held-out tasks given unbiased context:
+
+|                            | Accuracy |
+|----------------------------|----------|
+| GPT-3.5                 |       61 |
+| Self-Training (Control) |     59.8 |
+| BCT (Suggested Answer)     |    59.95 |
+| BCT (Post Hoc)             |     60.2 |
+| BCT (Black Square)         |    59.05 |
+| BCT (Wrong Few Shot)       |    60.25 |
+| BCT (Distractor: Fact)     |     60.3 |
+| BCT (Distractor: Argument) |    60.55 |
+| BCT (All 6)                |    60.05 |
+
+
+MT-Bench scores remain unchanged:
+|                            | Score |
+|----------------------------|-------|
+| GPT-3.5T                   |  8.35 |
+| GPT-4T                     |  8.99 |
+| BCT (Suggested Answer)     |   8.4 |
+| BCT (Distractor: Argument) |  8.35 |
+| BCT (All 6)                |  8.36 |
