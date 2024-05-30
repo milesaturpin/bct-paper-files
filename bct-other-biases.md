@@ -50,11 +50,11 @@ Few-shot shot performance on TruthfulQA performs the same as the self-training b
 
 ![fewshot](images/few_shot.png)
 
-MT-Bench scores remain unchanged:
+[MT-Bench](https://arxiv.org/abs/2306.05685) scores remain unchanged. MT-Bench measures a model's performance in multi-step chat turns, offering a way to observe if BCT degrades instruction following. We do not observe BCT decreasing GPT-3.5T's score in MT-Bench.
 |                            | Score |
 |----------------------------|-------|
-| GPT-3.5T                   |  8.35 |
 | GPT-4T                     |  8.99 |
+| GPT-3.5T                   |  8.35 |
 | BCT (Suggested Answer)     |   8.4 |
 | BCT (Distractor: Argument) |  8.35 |
 | BCT (All 6)                |  8.36 |
