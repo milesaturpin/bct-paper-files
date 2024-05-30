@@ -6,9 +6,11 @@ We test the following models:
 - BCT with individual biases. 
 - BCT with all 6 biases together.
 
-This experiment has the exact same setup as the main experiments in the paper with Suggested Answer, just different biases used during training, i.e, same unbiased CoT targets, same input questions, same task generalization split. The only thing changing is the biasing text added to the inputs. All models trained on the same amount of data (10k BCT samples).
+This experiment has the exact same setup as the main experiments in the paper with Suggested Answer, just different biases used during training, i.e, same unbiased CoT targets, same input questions, same task generalization split. The only thing changing is the biasing text added to the inputs. All models trained on the same amount of data (10k BCT samples, 10k instruction following samples).
 
 ### Biased reasoning evaluated on the training biases on held-out tasks
+
+First, training and evaluating on the same bias:
 
 ![Biased reasoning evaluated on held-out tasks](images/Biased%20reasoning%20evaluated%20on%20held-out%20tasks.png)
 
@@ -43,9 +45,9 @@ Zero-shot CoT accuracy remains virtually unchanged. We evaluate on held-out task
 | BCT (Distractor: Argument) |    60.55 |
 | BCT (All 6)                |    60.05 |
 
-Few-shot shot performance on TruthfulQA remains close to GPT-3.5T, within ~1%, performing the same as the self-training baseline. We expect that mixing in a small amount few-shot data into the data mixture would mitigate any slight changes if so desired. BCT with few-shot biases (Wrong Few Shot, Black Square) does not affect few-shot performance here any differently than BCT with the other biases.
+Few-shot shot performance on TruthfulQA remains close to GPT-3.5T, within ~1%, performing the same as the self-training baseline.  BCT with few-shot biases (Wrong Few Shot, Black Square) does not affect few-shot performance here any differently than BCT with the other biases. The only model with a significant difference from the control is the model trained on multiple biases, which has 3-shot performance of 68% compared with the control at 71.5%. We expect that mixing in a small amount few-shot data into the data mixture would mitigate any changes if so desired.
 
-
+![fewshot](images/few_shot.png)
 
 MT-Bench scores remain unchanged:
 |                            | Score |
