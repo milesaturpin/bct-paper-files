@@ -45,7 +45,7 @@ Zero-shot CoT accuracy remains virtually unchanged. We evaluate on held-out task
 | BCT (Distractor: Argument) |    60.55 |
 | BCT (All 6)                |    60.05 |
 
-Few-shot shot performance on TruthfulQA remains close to GPT-3.5T, within ~1%, performing the same as the self-training baseline.  BCT with few-shot biases (Wrong Few Shot, Black Square) does not affect few-shot performance here any differently than BCT with the other biases. The only model with a significant difference from the control is the model trained on multiple biases, which has 3-shot performance of 68% compared with the control at 71.5%. We expect that mixing in a small amount few-shot data into the data mixture would mitigate any changes if so desired.
+Few-shot shot performance on TruthfulQA remains close to GPT-3.5T, within ~1%, performing the same as the self-training baseline.  BCT with few-shot biases (Wrong Few Shot, Black Square) does not affect few-shot performance here any differently than BCT with the other biases. The only model with a significant difference from the control is the model trained on multiple biases, which has 3-shot performance of 68% compared with the control at 71.5%. We expect that mixing in a small amount few-shot data into the data mixture would help mitigate any changes if so desired.
 
 ![fewshot](images/few_shot.png)
 
